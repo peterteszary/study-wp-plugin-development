@@ -30,20 +30,21 @@ if ( ! function_exists( 'add_action' ) ){
     exit;
 }
 
+
+
 /* the plugin itself */
 
 class PtPlugin 
 {
     // methods
 
-    function __construct($string) {
-        echo $string;
-    
+    function __construct() {
+      
    
 }
 
 if ( class_exists( 'PtPlugin' )) {
-    $ptPlugin = new PtPlugin( 'PT PLugin initialized!');
+    $ptPlugin = new PtPlugin( 'PT PLugin initialized!' );
 }
 
 
