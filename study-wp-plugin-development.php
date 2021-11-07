@@ -35,6 +35,11 @@ if ( ! function_exists( 'add_action' ) ){
 class PtPlugin 
 {
     // methods
+
+    function __construct($string) {
+        echo $string;
+    }
+   
 }
 
 if ( class_exists( 'PtPlugin' ) {
@@ -44,5 +49,7 @@ $ptPlugin = new PtPlugin();
 function customFunction($arg) {
     echo $arg;
 }
+
+customFunction('this is my argument to echo';)
 
 ?>
