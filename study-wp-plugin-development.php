@@ -44,7 +44,7 @@ class PtPlugin
 }
 
 if ( class_exists( 'PtPlugin' )) {
-    $ptPlugin = new PtPlugin();
+    $PtPlugin = new PtPlugin();
 }
 
 
