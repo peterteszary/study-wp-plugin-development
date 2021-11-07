@@ -40,11 +40,11 @@ class PtPlugin
 
     function __construct() {
       
-   
+    }
 }
 
 if ( class_exists( 'PtPlugin' )) {
-    $ptPlugin = new PtPlugin( 'PT PLugin initialized!' );
+    $ptPlugin = new PtPlugin();
 }
 
 
