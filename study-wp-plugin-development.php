@@ -53,6 +53,9 @@ class PtPlugin
     }
 }
 
+if ( class_exists( 'PtPlugin' )) {
+    $PtPlugin = new PtPlugin();
+}
 
 
 
