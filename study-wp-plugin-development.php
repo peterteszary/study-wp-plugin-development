@@ -23,3 +23,30 @@ if( ! defined(  'ABSPATH' ) ){
 
 /*
 defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
+*/ 
+
+if ( ! function_exists( 'add_action' ) ){
+    echo 'Hey, you cannot access this file!';
+    exit;
+}
+
+
+
+/* the plugin itself */
+
+class PtPlugin 
+{
+    // methods
+
+    function __construct() {
+      
+   
+}
+
+if ( class_exists( 'PtPlugin' )) {
+    $ptPlugin = new PtPlugin( 'PT PLugin initialized!' );
+}
+
+
+
+?>
