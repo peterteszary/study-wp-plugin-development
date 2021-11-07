@@ -13,6 +13,36 @@ Lisence: GPLv2 or later
 Text Domain: study-wp-plugin-development
 */
 
+/*
 
+if( ! defined(  'ABSPATH' ) ){
+    die;
+
+}
+*/
+
+/*
+defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
+*/ 
+
+if ( ! function_exists( 'add_action' ) ){
+    echo 'Hey, you cannot access this file!';
+    exit;
+}
+
+/* the plugin itself */
+
+class PtPlugin 
+{
+    // methods
+}
+
+if ( class_exists( 'PtPlugin' ) {
+$ptPlugin = new PtPlugin();
+}
+
+function customFunction($arg) {
+    echo $arg;
+}
 
 ?>
