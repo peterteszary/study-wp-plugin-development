@@ -42,7 +42,7 @@ class PtPlugin
    
 }
 
-if ( class_exists( 'PtPlugin' ) {
+if ( class_exists( 'PtPlugin' )) {
     $ptPlugin = new PtPlugin( 'PT PLugin initialized!');
 }
 
