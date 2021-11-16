@@ -29,6 +29,7 @@ class TestPlugin
 
     function activate() {
             // generated a CPT
+            $this->custom_post_type();
             // flush rewrite rules
             flush_rewrite_rules();
     }
