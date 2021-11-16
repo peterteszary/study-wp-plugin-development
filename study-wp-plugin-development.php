@@ -58,6 +58,3 @@ register_activation_hook( __FILE__, array( $TestPlugin, 'activate' ) );
 register_activation_hook( __FILE__, array( $TestPlugin, 'deactivate' ) );
 
 // uninstall
-
-sssű
-sssssss
