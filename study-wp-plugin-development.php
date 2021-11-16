@@ -38,7 +38,7 @@ class PtPlugin
 {
     // methods
 
-   function__construct($string) {
+   function __construct($string) {
        echo $string
    }
 
