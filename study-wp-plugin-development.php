@@ -23,6 +23,9 @@ defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
 class TestPlugin 
 {
  
+        function __construct() {
+                add_action( 'init', array( $this, 'custom_post_type' ) );
+        }
 
     function activate() {
             // generated a CPT
@@ -36,6 +39,10 @@ class TestPlugin
     function uninstall() {
             // delete CPT
             // delete all the plugin data from the DB
+    }
+
+    function custom_post_type() {
+            register_post_type( 'book', ['public' => true] );
     }
 
 }
