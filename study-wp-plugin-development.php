@@ -14,7 +14,7 @@ Text Domain: study-wp-plugin-development
 */
 
 
-defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
+defined( 'ABSPATH' ) or die( 'Hey, you cannot access this file!' );
  
 
 /* the plugin itself */
