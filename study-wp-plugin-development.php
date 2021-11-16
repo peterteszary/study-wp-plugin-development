@@ -30,6 +30,7 @@ class TestPlugin
     function activate() {
             // generated a CPT
             // flush rewrite rules
+            flush_rewrite_rules();
     }
 
     function deactivate() {
