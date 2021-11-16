@@ -34,7 +34,6 @@ if ( ! function_exists( 'add_action' ) ){
 
 /* the plugin itself */
 
-/*
 
 class PtPlugin 
 {
