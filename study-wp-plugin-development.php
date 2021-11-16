@@ -55,7 +55,7 @@ class TestPlugin
         function enqueue() {
                 // enqueue all you scripts
                 wp_enqueue_style ('mypluginstyle', plugins_url( '/assets/mystyle.css', __FILE__ ) );
-                wp_enqueue_style ('mypluginscript', plugins_url( '/assets/mystyle.css', __FILE__ ) );
+                wp_enqueue_style ('mypluginscript', plugins_url( '/assets/myscript.js', __FILE__ ) );
         }
 
 }
