@@ -4,7 +4,7 @@
  */
 /*
 Plugin Name: study-wp-plugin-development
-Plugin URI: https://peterteszary.com
+Plugin URI: https://github.com/peterteszary/study-wp-plugin-development.git
 Description: This is my Test Plugin for study purpose.
 Version 1.0.0
 Author: Peter Teszáry
