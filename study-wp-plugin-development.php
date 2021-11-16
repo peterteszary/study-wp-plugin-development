@@ -42,15 +42,17 @@ class TestPlugin
  
 
     function activate() {
-            echo "The Plugin was activated";
+            // generated a CPT
+            // flush rewrite rules
     }
 
     function deactivate() {
-            echo "The Plugin was activated";
+            // flush rewrite rules
     }
 
     function uninstall() {
-
+            // delete CPT
+            // delete all the plugin data from the DB
     }
 
 }
