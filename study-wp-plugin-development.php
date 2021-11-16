@@ -53,5 +53,3 @@ if ( class_exists( 'PtPlugin' ) ) {
 
 
 
-?>
-
