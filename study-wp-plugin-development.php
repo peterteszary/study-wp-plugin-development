@@ -36,6 +36,7 @@ class TestPlugin
 
     function deactivate() {
             // flush rewrite rules
+            flush_rewrite_rules();
     }
 
     function uninstall() {
@@ -54,9 +55,7 @@ if ( class_exists( 'TestPlugin' ) ) {
 }
 
 // activation
-register_activation_hook( __FILE__, array( $TestPlugin, 'activate' ) );
+register_activation_hook( __FILE__, array( $testPlugin, 'activate' ) );
 
 // deactivation
-register_activation_hook( __FILE__, array( $TestPlugin, 'deactivate' ) );
-
-// uninstall
+register_activation_hook( __FILE__, array( $testPlugin, 'deactivate' ) );
