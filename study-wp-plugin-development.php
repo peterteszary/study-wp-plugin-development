@@ -37,19 +37,35 @@ defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
 /* the plugin itself */
 
 
-class PtPlugin 
+class TestPlugin 
 {
-    // methods
+ 
 
-   function __construct($string) {
-       echo $string
-         }
+    function activate() {
+
+    }
+
+    function deactivate() {
+
+    }
+
+    function uninstall() {
+
+    }
 
 }
 
-if ( class_exists( 'PtPlugin' ) ) {
-    $PtPlugin = new PtPlugin( 'Pt Plugin Initialized' );
+if ( class_exists( 'TestPlugin' ) ) {
+    $PtPlugin = new TestPlugin( '' );
 }
 
+// activation
+register_activation_hook( __FILE__, array( $TestPlugin, 'activate' ) );
 
+// deactivation
+register_activation_hook( __FILE__, array( $TestPlugin, 'deactivate' ) );
+
+
+
+// uninstall
 
