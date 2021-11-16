@@ -38,22 +38,14 @@ class PtPlugin
 {
     // methods
 
-    function activate(){
-
-    }
-
-    function deactivate(){
-
-    }
-
-    function uninstall(){
-
-    }
+   function__construct($string) {
+       echo $string
+   }
 
     }
 
 if ( class_exists( 'PtPlugin' )) {
-    $PtPlugin = new PtPlugin();
+    $PtPlugin = new PtPlugin( 'Pt Plugin initialized' );
 }
 
 
