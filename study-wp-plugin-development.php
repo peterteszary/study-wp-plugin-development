@@ -41,14 +41,14 @@ class PtPlugin
 {
     // methods
 
-   function __construct(string $string) {
+   function __construct($string) {
        echo $string
    }
 
     }
 
 if ( class_exists( 'PtPlugin' ) ) {
-    $PtPlugin = new PtPlugin( array(1, 2, 3) );
+    $PtPlugin = new PtPlugin( 'Pt Plugin Initialized' );
 }
 
 
