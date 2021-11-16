@@ -27,31 +27,41 @@ class TestPlugin
                 add_action( 'init', array( $this, 'custom_post_type' ) );
         }
 
-    function activate() {
-            // generated a CPT
-            $this->custom_post_type();
-            // flush rewrite rules
-            flush_rewrite_rules();
-    }
+        function register() {
+                add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+        }
 
-    function deactivate() {
-            // flush rewrite rules
-            flush_rewrite_rules();
-    }
+        function activate() {
+                // generated a CPT
+                $this->custom_post_type();
+                // flush rewrite rules
+                flush_rewrite_rules();
+        }
 
-    function uninstall() {
-            // delete CPT
-            // delete all the plugin data from the DB
-    }
+        function deactivate() {
+                // flush rewrite rules
+                flush_rewrite_rules();
+        }
 
-    function custom_post_type() {
-            register_post_type( 'book', ['public' => true, 'label' => 'Books'] );
-    }
+        function uninstall() {
+                // delete CPT
+                // delete all the plugin data from the DB
+        }
+
+        function custom_post_type() {
+                register_post_type( 'book', ['public' => true, 'label' => 'Books'] );
+        }
+
+        function enqueue() {
+                // enqueue all you scripts
+                wp_enqueue_style ('mypluginstyle', plugins_url( '/assets/mystyle.css', __FILE__ ) , array(''), false, 'all' );
+        }
 
 }
 
 if ( class_exists( 'TestPlugin' ) ) {
     $testPlugin = new TestPlugin( '' );
+    $testPlugin->register();
 }
 
 // activation
