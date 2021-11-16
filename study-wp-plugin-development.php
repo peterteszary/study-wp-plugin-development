@@ -13,26 +13,9 @@ Lisence: GPLv2 or later
 Text Domain: study-wp-plugin-development
 */
 
-/*
 
-if( ! defined(  'ABSPATH' ) ){
-    die;
-
-}
-*/
-
-
-/*
-if ( ! function_exists( 'add_action' ) ){
-    echo 'Hey, you cannot access this file!';
-    exit;
-}
-*/
-
-
-/* defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
+defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
  
-
 
 /* the plugin itself */
 
@@ -58,7 +41,7 @@ class TestPlugin
 }
 
 if ( class_exists( 'TestPlugin' ) ) {
-    $PtPlugin = new TestPlugin( '' );
+    $testPlugin = new TestPlugin( '' );
 }
 
 // activation
