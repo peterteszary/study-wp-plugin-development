@@ -28,7 +28,7 @@ class TestPlugin
         }
 
         function register() {
-                add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+                add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
         }
 
         function activate() {
