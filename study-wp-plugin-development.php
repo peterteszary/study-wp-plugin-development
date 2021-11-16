@@ -59,3 +59,4 @@ register_activation_hook( __FILE__, array( $TestPlugin, 'deactivate' ) );
 
 // uninstall
 
+aaa
