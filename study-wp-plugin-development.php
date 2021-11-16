@@ -42,11 +42,11 @@ class TestPlugin
  
 
     function activate() {
-
+            echo "The Plugin was activated";
     }
 
     function deactivate() {
-
+            echo "The Plugin was activated";
     }
 
     function uninstall() {
