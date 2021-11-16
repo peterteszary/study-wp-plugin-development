@@ -30,7 +30,7 @@ if ( ! function_exists( 'add_action' ) ){
 */
 
 
-defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
+/* defined( 'ABSPATH' ) od die( 'Hey, you cannot access this file!' );
  
 
 
