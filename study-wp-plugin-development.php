@@ -40,9 +40,9 @@ class TestPlugin
                 add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
         }
 
-protected function create_post_type() {
-        add_action( 'init', array( $this, 'custom_post_type' ) );
-}
+        protected function create_post_type() {
+                add_action( 'init', array( $this, 'custom_post_type' ) );
+        }
 
         function activate() {
                 // generated a CPT
