@@ -22,14 +22,27 @@ Text Domain: study-wp-plugin-development
 
 class TestPlugin 
 {
+
+        //Public
+
+        //Protected
+
+        //Private
+
+
+
  
         function __construct() {
-                add_action( 'init', array( $this, 'custom_post_type' ) );
+                $this->create_post_type();
         }
 
         function register() {
                 add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
         }
+
+protected function create_post_type() {
+        add_action( 'init', array( $this, 'custom_post_type' ) );
+}
 
         function activate() {
                 // generated a CPT
@@ -53,7 +66,7 @@ class TestPlugin
         }
 
         function enqueue() {
-                // enqueue all you scripts
+                // enqueue all our scripts
                 wp_enqueue_style ('mypluginstyle', plugins_url( '/assets/mystyle.css', __FILE__ ) );
                 wp_enqueue_style ('mypluginscript', plugins_url( '/assets/myscript.js', __FILE__ ) );
         }
