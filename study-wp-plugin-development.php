@@ -34,11 +34,13 @@ class TestPlugin
 
                 add_action( 'admin_menu', array( $this, 'add_admin_pages') );
                 
-                add_filter( 'plugin_action_link_NAME-OF-MY-PLUGIN', array( $this, 'settings_link') );
+                add_filter( 'plugin_action_links_NAME-OF-MY-PLUGIN', array( $this, 'settings_link') );
         }
 
-        public function settings:link( $links) {
-                // add custom settings
+        public function settings_link( $links) {
+                $settings_link = '<a href='options-general.php?page=test_plugin'>Settings</a>';
+                array_push( $links, $settings_link);
+                return $links;
         }
 
         public function add_admin_pages() {
