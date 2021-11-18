@@ -23,37 +23,19 @@ Text Domain: study-wp-plugin-development
 class TestPlugin 
 {
 
-        //Public
-
-        //Protected
-
-        //Private
-
-
-
- 
-        function __construct() {
-                $this->create_post_type();
-        }
-
+         
         function register() {
                 add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
+
+                add_action( 'admin_menu', array( $this, 'add_admin_pages') );
+        }
+
+        public function add_admin_pages() {
+                add_menu_page( 'TesTinator Plugin', 'Testinator', 'manage_options', 'test_plugin', array( $this, 'admin_index'), 'dashicon-store', 11 )
         }
 
         protected function create_post_type() {
                 add_action( 'init', array( $this, 'custom_post_type' ) );
-        }
-
-        function activate() {
-                // generated a CPT
-                $this->custom_post_type();
-                // flush rewrite rules
-                flush_rewrite_rules();
-        }
-
-        function deactivate() {
-                // flush rewrite rules
-                flush_rewrite_rules();
         }
 
         function uninstall() {
@@ -73,13 +55,16 @@ class TestPlugin
 
 }
 
-if ( class_exists( 'TestPlugin' ) ) {
-    $testPlugin = new TestPlugin( '' );
-    $testPlugin->register();
-}
+        if ( class_exists( 'TestPlugin' ) ) {
+                $testPlugin = new TestPlugin( '' );
+                $testPlugin->register();
+        
+        }
 
-// activation
-register_activation_hook( __FILE__, array( $testPlugin, 'activate' ) );
+                // activation
+                require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-activate.php';
+                register_activation_hook( __FILE__, array( 'TestPluginActivate', 'activate' ) );
 
-// deactivation
-register_activation_hook( __FILE__, array( $testPlugin, 'deactivate' ) );
+                // deactivation
+                require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-deactivate.php';
+                register_activation_hook( __FILE__, array( 'TestPluginDeactivate', 'deactivate' ) );
