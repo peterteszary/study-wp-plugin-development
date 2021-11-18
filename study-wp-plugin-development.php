@@ -23,11 +23,22 @@ Text Domain: study-wp-plugin-development
 class TestPlugin 
 {
 
-         
+         public $plugin;
+
+        function __construct() {
+                $this->plugin = plugin_basename( __FILE__ );
+        }
+
         function register() {
                 add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 
                 add_action( 'admin_menu', array( $this, 'add_admin_pages') );
+                
+                add_filter( 'plugin_action_link_NAME-OF-MY-PLUGIN', array( $this, 'settings_link') );
+        }
+
+        public function settings:link( $links) {
+                // add custom settings
         }
 
         public function add_admin_pages() {
