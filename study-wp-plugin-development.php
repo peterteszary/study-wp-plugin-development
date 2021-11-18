@@ -54,7 +54,7 @@ class TestPlugin
         }
 
         public function settings_link( $links) {
-                $settings_link = '<a href='options-general.php?page=test_plugin'>Settings</a>';
+                $settings_link = '<a href="options-general.php?page=test_plugin">Settings</a>';
                 array_push( $links, $settings_link);
                 return $links;
         }
