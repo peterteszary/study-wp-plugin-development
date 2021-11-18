@@ -31,7 +31,7 @@ class TestPlugin
         }
 
         public function add_admin_pages() {
-                add_menu_page( 'TesTinator Plugin', 'Testinator', 'manage_options', 'test_plugin', array( $this, 'admin_index'), 'dashicon-store', 11 );
+                add_menu_page( 'TesTinator Plugin', 'Testinator', 'manage_options', 'test_plugin', array( $this, 'admin_index' ), 'superhero', 110 );
         }
 
         protected function create_post_type() {
