@@ -1,1 +1,1 @@
-<h1>Testinator Plugin<h1>
+<h1>Testinator Plugin</h1>
