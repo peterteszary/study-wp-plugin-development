@@ -1,0 +1,17 @@
+{
+    "name": "peterteszary/study-wp-plugin-development",
+    "description": "Awesome starter plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Teszáry Péter",
+            "email": "peterteszary@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}, 
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

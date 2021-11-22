@@ -32,6 +32,9 @@ Copyright 2005-2015 Automattic, Inc.
 
  defined( 'ABSPATH' ) or die( 'Hey, you cannot access this file!' ); 
  
+if ( file_exists( dirname( __FILE__) . '/vendor/autoload.php') ) {
+        require_once dirname( __FILE__) . '/vendor/autoload.php';
+}
 
 /* the plugin itself */
 if ( !class_exists( 'TestPlugin' ) ) {
