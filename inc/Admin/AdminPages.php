@@ -4,11 +4,10 @@
 */
 
 namespace Inc\Admin;
- 
+
 class AdminPages{
 
-    function __construct(argument) {
-
-    }
+    function __construct() 
+    {}
 
 }

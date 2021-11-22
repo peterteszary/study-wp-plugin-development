@@ -36,6 +36,10 @@ if ( file_exists( dirname( __FILE__) . '/vendor/autoload.php') ) {
         require_once dirname( __FILE__) . '/vendor/autoload.php';
 }
 
+use Inc\Activate; 
+use Inc\Deactivate; 
+use Inc\Admin\AdminPages; 
+
 /* the plugin itself */
 if ( !class_exists( 'TestPlugin' ) ) {
 
@@ -88,6 +92,11 @@ class TestPlugin
                 wp_enqueue_style ('mypluginscript', plugins_url( '/assets/myscript.js', __FILE__ ) );
         }
 
+        function activate() {
+                // require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-activate.php';
+                Activate::activate();
+        }
+
 }
 
         if ( class_exists( 'TestPlugin' ) ) {
@@ -97,10 +106,10 @@ class TestPlugin
         }
 
                 // activation
-                require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-activate.php';
-                register_activation_hook( __FILE__, array( 'TestPluginActivate', 'activate' ) );
+                //require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-activate.php';
+                register_activation_hook( __FILE__, array( '$TestPlugin', 'activate' ) );
 
                 // deactivation
-                require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-deactivate.php';
-                register_activation_hook( __FILE__, array( 'TestPluginDeactivate', 'deactivate' ) );
+                //require_once plugin_dir_path( __FILE__ ) . 'inc/test-plugin-deactivate.php';
+                register_activation_hook( __FILE__, array( 'Deactivate', 'deactivate' ) );
 }
