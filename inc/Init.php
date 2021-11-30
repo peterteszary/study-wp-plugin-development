@@ -45,8 +45,6 @@ final class Init
 		return $service;
 	}
 }
- 
-
 
 /*
 
