@@ -5,16 +5,18 @@
 
 namespace Inc\Base;
 
+/**
+* 
+*/
 class Enqueue
-{  
-    public function register() {
-        add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
-
-    }
-
-    function enqueue() {
-        // enqueue all our scripts
-        wp_enqueue_style ('mypluginstyle', plugins_url( '/assets/mystyle.css', __FILE__ ) );
-        wp_enqueue_style ('mypluginscript', plugins_url( '/assets/myscript.js', __FILE__ ) );
-}
+{
+	public function register() {
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+	}
+	
+	function enqueue() {
+		// enqueue all our scripts
+		wp_enqueue_style( 'mypluginstyle', PLUGIN_URL . 'assets/mystyle.css' );
+		wp_enqueue_script( 'mypluginscript', PLUGIN_URL . 'assets/myscript.js' );
+	}
 }
