@@ -5,6 +5,8 @@
 
 namespace Inc\Pages;
 
+use \Inc\Base\BaseController
+
 class Admin
 {  
     public function register() {
