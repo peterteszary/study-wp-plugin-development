@@ -53,8 +53,8 @@ function deactivate_test_plugin() {
 	Deactivate::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_test_plugin' )
-register_deactivation_hook( __FILE__, 'deactivate_test_plugin' )
+register_activation_hook( __FILE__, 'activate_test_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_test_plugin' );
 
 
 if ( class_exists( 'Inc\\Init' ) ) {
