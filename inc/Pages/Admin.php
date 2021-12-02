@@ -2,7 +2,6 @@
 /**
  * * @package study-wp-plugin-development
  */
-
 namespace Inc\Pages;
 
 use \Inc\Base\BaseController;
