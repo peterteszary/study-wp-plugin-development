@@ -18,7 +18,7 @@ class Admin extends BaseController
 
 	public function __construct()
 	{
-		/*$this->settings = new SettingsApi();*/
+		$this->settings = new SettingsApi();
 
 		$this->pages = array(
 			array(
