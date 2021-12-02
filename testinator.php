@@ -1,16 +1,16 @@
 <?php
 /**
- * @package  AlecadddPlugin
+ * @package  TestinatorPlugin
  */
 /*
-Plugin Name: Alecaddd Plugin
-Plugin URI: http://alecaddd.com/plugin
+Plugin Name: Testinator Plugin
+Plugin URI: https://github.com/peterteszary/study-wp-plugin-development
 Description: This is my first attempt on writing a custom Plugin for this amazing tutorial series.
 Version: 1.0.0
-Author: Alessandro "Alecaddd" Castellani
-Author URI: http://alecaddd.com
+Author: Peter Teszáry
+Author URI: http://peterteszary.com
 License: GPLv2 or later
-Text Domain: alecaddd-plugin
+Text Domain: testinator-plugin
 */
 
 /*
@@ -42,18 +42,18 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 /**
  * The code that runs during plugin activation
  */
-function activate_alecaddd_plugin() {
+function activate_testinator_plugin() {
 	Inc\Base\Activate::activate();
 }
-register_activation_hook( __FILE__, 'activate_alecaddd_plugin' );
+register_activation_hook( __FILE__, 'activate_testinator_plugin' );
 
 /**
  * The code that runs during plugin deactivation
  */
-function deactivate_alecaddd_plugin() {
+function deactivate_testinator_plugin() {
 	Inc\Base\Deactivate::deactivate();
 }
-register_deactivation_hook( __FILE__, 'deactivate_alecaddd_plugin' );
+register_deactivation_hook( __FILE__, 'deactivate_testinator_plugin' );
 
 /**
  * Initialize all the core classes of the plugin
