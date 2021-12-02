@@ -22,12 +22,12 @@ class Admin extends BaseController
 
 		$this->pages = array(
 			array(
-				'page_title' => 'Alecaddd Plugin', 
-				'menu_title' => 'Alecaddd', 
+				'page_title' => 'Testinator Plugin', 
+				'menu_title' => 'Testinator', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'alecaddd_plugin', 
-				'callback' => function() { echo '<h1>Alecaddd Plugin</h1>'; }, 
-				'icon_url' => 'dashicons-store', 
+				'menu_slug' => 'test_plugin', 
+				'callback' => function() { echo '<h1>Testinator</h1>'; }, 
+				'icon_url' => 'dashicons-superhero', 
 				'position' => 110
 			)
 		);
