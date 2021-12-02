@@ -1,16 +1,16 @@
 {
-    "name": "peterteszary/study-wp-plugin-development",
-    "description": "Awesome starter plugin",
+    "name": "alecaddd/alecaddd-plugin",
+    "description": "Awesome starter plugin example",
     "type": "project",
     "license": "GPL",
     "authors": [
         {
-            "name": "Teszáry Péter",
-            "email": "peterteszary@gmail.com"
+            "name": "Alecaddd",
+            "email": "castellani.ale@gmail.com"
         }
     ],
     "minimum-stability": "dev",
-    "require": {}, 
+    "require": {},
     "autoload": {
         "psr-4": {"Inc\\": "./inc"}
     }

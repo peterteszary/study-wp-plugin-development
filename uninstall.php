@@ -1,21 +1,21 @@
 <?php
 
-/* 
-* Trigger File on plugin uninstall 
-*
-* @ package TestPlugin
-*/
+/**
+ * Trigger this file on Plugin uninstall
+ *
+ * @package  AlecadddPlugin
+ */
 
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-        die;
+	die;
 }
 
 // Clear Database stored data
 $books = get_posts( array( 'post_type' => 'book', 'numberposts' => -1 ) );
 
-// foreach( $books as $book) {
-//    wp_delete_posts( $book->ID, true );
-// }
+foreach( $books as $book ) {
+	wp_delete_post( $book->ID, true );
+}
 
 // Access the database via SQL
 global $wpdb;

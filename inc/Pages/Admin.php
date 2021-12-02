@@ -1,6 +1,6 @@
-<?php
+<?php 
 /**
- * * @package study-wp-plugin-development
+ * @package  AlecadddPlugin
  */
 namespace Inc\Pages;
 
@@ -18,16 +18,16 @@ class Admin extends BaseController
 
 	public function __construct()
 	{
-		$this->settings = new SettingsApi(); /*szopdkiafaszom*/
+		$this->settings = new SettingsApi();
 
 		$this->pages = array(
 			array(
-				'page_title' => 'Testinator', 
-				'menu_title' => 'Testinator', 
+				'page_title' => 'Alecaddd Plugin', 
+				'menu_title' => 'Alecaddd', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'testinator_plugin', 
-				'callback' => function() { echo '<h1>Testinator Plugin</h1>'; }, 
-				'icon_url' => 'dashicons-superhero', 
+				'menu_slug' => 'alecaddd_plugin', 
+				'callback' => function() { echo '<h1>Alecaddd Plugin</h1>'; }, 
+				'icon_url' => 'dashicons-store', 
 				'position' => 110
 			)
 		);

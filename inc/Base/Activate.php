@@ -1,6 +1,6 @@
 <?php
 /**
- * * @package study-wp-plugin-development
+ * @package  AlecadddPlugin
  */
 namespace Inc\Base;
 
