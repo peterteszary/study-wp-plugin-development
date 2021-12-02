@@ -26,7 +26,7 @@ class Admin extends BaseController
 				'page_title' => 'Testinator Plugin', 
 				'menu_title' => 'Testinator', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'tert_plugin', 
+				'menu_slug' => 'test_plugin', 
 				'callback' => function() { echo '<h1>Testinator Plugin</h1>'; }, 
 				'icon_url' => 'dashicons-superhero', 
 				'position' => 110
