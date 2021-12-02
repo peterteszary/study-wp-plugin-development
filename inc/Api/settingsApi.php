@@ -1,7 +1,8 @@
 <?php
 /**
- * * @package study-wp-plugin-development
+ * @package  TestinatorPlugin
  */
+
 namespace Inc\Api;
 
 class SettingsApi

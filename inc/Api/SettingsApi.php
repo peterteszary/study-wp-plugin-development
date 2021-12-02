@@ -1,7 +1,8 @@
-<?php 
+<?php
 /**
- * @package  AlecadddPlugin
+ * @package  TestinatorPlugin
  */
+
 namespace Inc\Api;
 
 class SettingsApi
