@@ -3,7 +3,7 @@
 /**
  * Trigger this file on Plugin uninstall
  *
- * @package  TestinatorPlugin
+ * @package  AlecadddPlugin
  */
 
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {

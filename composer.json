@@ -1,12 +1,12 @@
 {
-    "name": "testinator/testinator-plugin",
+    "name": "alecaddd/alecaddd-plugin",
     "description": "Awesome starter plugin example",
     "type": "project",
     "license": "GPL",
     "authors": [
         {
-            "name": "testinator",
-            "email": "peterteszary@gmail.com"
+            "name": "Alecaddd",
+            "email": "castellani.ale@gmail.com"
         }
     ],
     "minimum-stability": "dev",

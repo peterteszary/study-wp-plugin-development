@@ -1,6 +1,6 @@
-<?php
+<?php 
 /**
- * @package  TestinatorPlugin
+ * @package  AlecadddPlugin
  */
 namespace Inc\Base;
 
